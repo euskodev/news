@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.122.0">
-  <title>Blog Template · Bootstrap v5.3</title>
+  <title>Información y noticias</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
 
@@ -208,7 +208,8 @@
           <!--<a class="link-secondary" href="#">Subscribe</a>-->
         </div>
         <div class="col-4 text-center" style="background-color:;">
-          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{% url 'home_app:home' %}">infor<b class="" style="color: #85c1e9;">day</b></a>
+          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{% url 'home_app:home' %}">infor<b
+              class="" style="color: #85c1e9;">day</b></a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
           <a class="link-secondary" href="#" aria-label="Search">
@@ -248,19 +249,20 @@
   <main class="container">
 
     <!-- Noticia destacada 1 -->
-     {% for news in news_selection %}
-     {% if news.highlight1 == True %}
+    {% for news in news_selection %}
+    {% if news.highlight1 == True %}
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
       <div class="row">
         <a href="{% url 'home_app:news-detail' news.id %}" style="text-decoration:none; color:black;">
           <div class="col-lg-6 px-0">
             <h1 class="display-4 fst-italic">{{ news.title }}</h1>
             <p class="lead my-3 p-1">{{ news.summary }}</p>
-            <p class="lead mb-0"><a href="{% url 'home_app:news-detail' news.id %}" class="text-body-emphasis fw-bold">Leer...</a></p>
+            <p class="lead mb-0"><a href="{% url 'home_app:news-detail' news.id %}"
+                class="text-body-emphasis fw-bold">Leer...</a></p>
           </div>
           <div class="col-lg-6 px-0 p-0 m-0">
             <a href="{% url 'home_app:news-detail' news.id %}">
-            <img class="w-100" height="100%" src="{{ news.image }}">
+              <img class="w-100" height="100%" src="{{ news.image }}">
             </a>
           </div>
         </a>
@@ -287,8 +289,9 @@
                 <use xlink:href="#chevron-right" /></svg>
             </a>
           </div>
-          <div class="col-auto d-none d-lg-block" style="background-image: url('{{ news.image }}'); background-size:cover; width:300px; background-position: center">
-            
+          <div class="col-auto d-none d-lg-block"
+            style="background-image: url('{{ news.image }}'); background-size:cover; width:300px; background-position: center">
+
           </div>
         </div>
       </div>
@@ -312,8 +315,9 @@
                 <use xlink:href="#chevron-right" /></svg>
             </a>
           </div>
-          <div class="col-auto d-none d-lg-block" style="background-image: url('{{ news.image }}'); background-size:cover; width:300px; background-position: center">
-            
+          <div class="col-auto d-none d-lg-block"
+            style="background-image: url('{{ news.image }}'); background-size:cover; width:300px; background-position: center">
+
           </div>
         </div>
       </div>
@@ -330,8 +334,8 @@
 
         <div class="container">
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Mundo' %}
             <div class="col-md-6">
@@ -341,13 +345,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -364,13 +370,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -379,8 +387,8 @@
 
           </div>
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Musica' %}
             <div class="col-md-6">
@@ -390,13 +398,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -413,13 +423,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -429,8 +441,8 @@
           </div>
 
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Deportes' %}
             <div class="col-md-6">
@@ -440,13 +452,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -463,13 +477,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -479,8 +495,8 @@
           </div>
 
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Cultura' %}
             <div class="col-md-6">
@@ -490,13 +506,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -513,13 +531,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -529,8 +549,8 @@
           </div>
 
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Politica' %}
             <div class="col-md-6">
@@ -540,13 +560,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -563,13 +585,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -579,8 +603,8 @@
           </div>
 
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Ciencia' %}
             <div class="col-md-6">
@@ -590,13 +614,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -613,13 +639,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -629,8 +657,8 @@
           </div>
 
           <div class="row">
-          
-            <!--1 izquierda-->  
+
+            <!--1 izquierda-->
             {% for news in news_selection %}
             {% if news.category.name == 'Estilo' %}
             <div class="col-md-6">
@@ -640,13 +668,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -663,13 +693,15 @@
                   <h5 class="mb-0">{{ news.title }}</h5>
                   <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
                   <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
                     Leer
                     <svg class="bi">
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                <div class="col-auto d-none d-lg-block w-50" style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
                 </div>
               </div>
             </div>
@@ -679,7 +711,7 @@
           </div>
         </div>
 
-      
+
 
         <nav class="blog-pagination" aria-label="Pagination">
           <a class="btn btn-outline-primary rounded-pill" href="#">Anteriores</a>
@@ -687,7 +719,7 @@
         </nav>
 
       </div>
-    
+
 
       <div class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
@@ -705,7 +737,7 @@
                 <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                   href="{% url 'home_app:news-detail' news.id %}">
                   <img src="{{ news.image }}" width="100%" height="96">
-                  
+
                   <div class="col-lg-8">
                     <h6 class="mb-0">{{ news.title }}</h6>
                     <small class="text-body-secondary">{{ news.date_time|date:"d/m/Y" }}</small>
@@ -750,8 +782,7 @@
   </main>
 
   <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-    <p>Web built for by <a
-        href="https://www.euskodev.eus">euskodev</a>.</p>
+    <p>Web built for by <a href="https://www.euskodev.eus">euskodev</a>.</p>
     <p class="mb-0">
       <a href="#home">Ir al principio</a>
     </p>
