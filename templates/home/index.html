@@ -231,33 +231,20 @@
 
     <div class="nav-scroller py-1 mb-3 border-bottom">
       <nav class="nav nav-underline justify-content-between">
-        <a class="nav-item nav-link link-body-emphasis active" href="#">Mundo</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Technology' %}">Tecnología</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Music' %}">Música</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Society' %}">Sociedad</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Sport' %}">Deportes</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Design' %}">Diseño</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Culture' %}">Cultura</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Business' %}">Negocios</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Politics' %}">Política</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Opinion' %}">Opinión</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Science' %}">Ciencia</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Health' %}">Salud</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Style' %}">Estilo</a>
-        <a class="nav-item nav-link link-body-emphasis"
-          href="{% url 'home_app:newsByQuestion' category='Travel' %}">Viajes</a>
+        <a class="nav-item nav-link link-body-emphasis active" href="{% url 'home_app:newsByQuestion' category='World' %}">Mundo</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Technology' %}">Tecnología</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Music' %}">Música</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Society' %}">Sociedad</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Sport' %}">Deportes</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Design' %}">Diseño</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Culture' %}">Cultura</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Business' %}">Negocios</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Politics' %}">Política</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Opinion' %}">Opinión</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Science' %}">Ciencia</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Health' %}">Salud</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Style' %}">Estilo</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Travel' %}">Viajes</a>
       </nav>
     </div>
   </div>
@@ -353,7 +340,7 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Mundo' %}
+            {% if news.category.name == 'World' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -378,7 +365,7 @@
 
             <!--1 derecha-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Tecnologia' %}
+            {% if news.category.name == 'Technology' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -406,7 +393,7 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Musica' %}
+            {% if news.category.name == 'Music' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -431,61 +418,7 @@
 
             <!--1 derecha-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Sociedad' %}
-            <div class="col-md-6">
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
-                  <h5 class="mb-0">{{ news.title }}</h5>
-                  <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
-                  <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}"
-                    class="icon-link gap-1 icon-link-hover stretched-link">
-                    Leer
-                    <svg class="bi">
-                      <use xlink:href="#chevron-right" /></svg>
-                  </a>
-                </div>
-                <div class="col-auto d-none d-lg-block w-50"
-                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-          </div>
-
-          <div class="row">
-
-            <!--1 izquierda-->
-            {% for news in news_selection %}
-            {% if news.category.name == 'Deportes' %}
-            <div class="col-md-6">
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
-                  <h5 class="mb-0">{{ news.title }}</h5>
-                  <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
-                  <p class="mb-auto">{{ news.resume }}</p>
-                  <a href="{% url 'home_app:news-detail' news.id %}"
-                    class="icon-link gap-1 icon-link-hover stretched-link">
-                    Leer
-                    <svg class="bi">
-                      <use xlink:href="#chevron-right" /></svg>
-                  </a>
-                </div>
-                <div class="col-auto d-none d-lg-block w-50"
-                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-            <!--1 derecha-->
-            {% for news in news_selection %}
-            {% if news.category.name == 'Diseno' %}
+            {% if news.category.name == 'Society' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -514,7 +447,7 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Cultura' %}
+            {% if news.category.name == 'Sport' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -539,7 +472,7 @@
 
             <!--1 derecha-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Negocios' %}
+            {% if news.category.name == 'Design' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -568,7 +501,61 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Politica' %}
+            {% if news.category.name == 'Culture' %}
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
+                  <h5 class="mb-0">{{ news.title }}</h5>
+                  <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
+                  <p class="mb-auto">{{ news.resume }}</p>
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
+                    Leer
+                    <svg class="bi">
+                      <use xlink:href="#chevron-right" /></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!--1 derecha-->
+            {% for news in news_selection %}
+            {% if news.category.name == 'Business' %}
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
+                  <h5 class="mb-0">{{ news.title }}</h5>
+                  <div class="mb-1 text-body-secondary">{{ news.datetime }}</div>
+                  <p class="mb-auto">{{ news.resume }}</p>
+                  <a href="{% url 'home_app:news-detail' news.id %}"
+                    class="icon-link gap-1 icon-link-hover stretched-link">
+                    Leer
+                    <svg class="bi">
+                      <use xlink:href="#chevron-right" /></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block w-50"
+                  style="background-image: url('{{ news.image }}'); background-size:cover; background-position:center;">
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+          </div>
+
+          <div class="row">
+
+            <!--1 izquierda-->
+            {% for news in news_selection %}
+            {% if news.category.name == 'Politics' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -622,7 +609,7 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Ciencia' %}
+            {% if news.category.name == 'Science' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -647,7 +634,7 @@
 
             <!--1 derecha-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Salud' %}
+            {% if news.category.name == 'Health' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -676,7 +663,7 @@
 
             <!--1 izquierda-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Estilo' %}
+            {% if news.category.name == 'Style' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -701,7 +688,7 @@
 
             <!--1 derecha-->
             {% for news in news_selection %}
-            {% if news.category.name == 'Viajes' %}
+            {% if news.category.name == 'Travel' %}
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
