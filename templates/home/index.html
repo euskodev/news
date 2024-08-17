@@ -1,4 +1,5 @@
 {% load static %}
+{% load adsense_tags %}
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -122,6 +123,11 @@
 </head>
 
 <body id="home">
+
+  {{post.body|inject_adsense_after_paragraph:"templates/ads.html"|safe}}
+
+
+
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path
