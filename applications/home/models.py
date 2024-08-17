@@ -22,10 +22,10 @@ class Category(models.Model):
 class News(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='static/img', blank=True)
+    image = models.ImageField(upload_to='static/img', blank=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField(blank=True, null=True)
-    summary = models.TextField(blank=True, null=True)
+    content = HTMLField( blank=True,null=True)
+    summary = HTMLField( blank=True,null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True,null=True)
     highlight1 = models.BooleanField(blank=True,null=True)
     highlight2 = models.BooleanField(blank=True,null=True)
