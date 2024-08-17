@@ -235,18 +235,17 @@
       <nav class="nav nav-underline justify-content-between">
         <a class="nav-item nav-link link-body-emphasis active" href="#">Mundo</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Tecnología</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Música</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Sociedad</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Deportes</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Diseño</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Cultura</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Negocios</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Política</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Opinión</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Ciencia</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Salud</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Estilo</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Viajes</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Society' %}">Sociedad</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Sport' %}">Deportes</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Design' %}">Diseño</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Culture' %}">Cultura</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Business' %}">Negocios</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Politics' %}">Política</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Opinion' %}">Opinión</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Science' %}">Ciencia</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Health' %}">Salud</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Style' %}">Estilo</a>
+        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Travel' %}">Viajes</a>
       </nav>
     </div>
   </div>

@@ -9,4 +9,5 @@ urlpatterns = [
     #path('news_detail', views.HomePageView.as_view(),name='home',),
     path('home/articulo/<int:pk>/', views.NewsDetailView.as_view(), name='news-detail' 
 ),
+    path('newsByFilter/<str:category>/', views.NewsByCategoryView.as_view(), name='newsByQuestion'),
 ]
