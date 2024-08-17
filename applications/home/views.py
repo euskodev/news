@@ -15,9 +15,11 @@ class HomePageView(ListView):
         '-date_time'
     ]
 
+    #q = ProductOrder.objects.values('Category').distinct()
+
 class NewsView(ListView):
     model = News
-    template_name = 'index.html'
+    template_name = 'home/index.html'
     context_object_name = 'news_selection'
     ordering = [
         '-date_time'
@@ -41,6 +43,6 @@ class NewsByCategoryView(ListView):
         print(categoryName)
         print(categoryName)
         #newsByCategory = News.objects.filter(category__name=categoryName)
-        context['news_selection'] = News.objects.filter(category__name = categoryName)
+        context['news_selection'] = News.objects.filter(category__name = categoryName).order_by('-id')
         return context
 
