@@ -3,7 +3,6 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-
   <!--espacio para google adsense-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565972943494658"
     crossorigin="anonymous"></script>
@@ -17,7 +16,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
 
-  <meta name="google-adsense-account" content="ca-pub-1565972943494658">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -118,7 +116,11 @@
   <!-- Custom styles for this template -->
   <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 
+  <!--esto  es para ads.txt google anuncios-->
 
+  <meta name="google-adsense-account" content="ca-pub-1565972943494658">
+
+  <!--aca termina lo de ads.txt de google anuncios -->
 </head>
 
 <body id="home">
@@ -236,19 +238,32 @@
     <div class="nav-scroller py-1 mb-3 border-bottom">
       <nav class="nav nav-underline justify-content-between">
         <a class="nav-item nav-link link-body-emphasis active" href="#">Mundo</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Technology' %}">Tecnología</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Music' %}">Música</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Society' %}">Sociedad</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Sport' %}">Deportes</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Design' %}">Diseño</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Culture' %}">Cultura</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Business' %}">Negocios</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Politics' %}">Política</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Opinion' %}">Opinión</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Science' %}">Ciencia</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Health' %}">Salud</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Style' %}">Estilo</a>
-        <a class="nav-item nav-link link-body-emphasis" href="{% url 'home_app:newsByQuestion' category='Travel' %}">Viajes</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Technology' %}">Tecnología</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Music' %}">Música</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Society' %}">Sociedad</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Sport' %}">Deportes</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Design' %}">Diseño</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Culture' %}">Cultura</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Business' %}">Negocios</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Politics' %}">Política</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Opinion' %}">Opinión</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Science' %}">Ciencia</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Health' %}">Salud</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Style' %}">Estilo</a>
+        <a class="nav-item nav-link link-body-emphasis"
+          href="{% url 'home_app:newsByQuestion' category='Travel' %}">Viajes</a>
       </nav>
     </div>
   </div>
