@@ -301,6 +301,7 @@
     <div class="row mb-2">
       {% for news in news_selection %}
       {% if news.highlight2 == True %}
+      {% autoescape off %}
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
@@ -320,6 +321,7 @@
           </div>
         </div>
       </div>
+      {% endautoescape %}
       {% endif %}
       {% endfor %}
 
@@ -327,6 +329,7 @@
       <!-- Destacada 3 -->
       {% for news in news_selection %}
       {% if news.highlight3 == True %}
+      {% autoescape off %}
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
@@ -346,6 +349,7 @@
           </div>
         </div>
       </div>
+      {% endautoescape%}
       {% endif %}
       {% endfor %}
 
