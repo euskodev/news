@@ -9,6 +9,7 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('applications.home.urls')),
+    path('tynymce/', include('tinymce.urls')),
     path("ads.txt",
          RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),),
 ]
