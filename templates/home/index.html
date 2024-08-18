@@ -120,7 +120,7 @@
 </head>
 
 <body id="home">
-  {% autoescape off %}
+  
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -271,6 +271,7 @@
     <!-- Noticia destacada 1 -->
     {% for news in news_selection %}
     {% if news.highlight1 == True %}
+    {% autoescape off %}
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
       <div class="row">
         <a href="{% url 'home_app:news-detail' news.id %}" style="text-decoration:none; color:black;">
@@ -291,6 +292,7 @@
         </a>
       </div>
     </div>
+    {% endautoescape %}
     {% endif %}
     {% endfor %}
 
@@ -811,7 +813,7 @@
     </p>
   </footer>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-{% endautoscape %}
+  
 </body>
 
 </html>
