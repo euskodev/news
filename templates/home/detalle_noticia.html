@@ -270,7 +270,7 @@
 
     <div class="row g-5">
       <div class="col-md-8">
-
+        {% autoescape off %}
         <article class="blog-post">
           <h2 class="display-5 link-body-emphasis mb-1 text-center p-5">{{ news_detail.title }}</h2>
           <img class="w-100 mb-3" src="{{ news_detail.image.url }}">
@@ -278,6 +278,7 @@
               style="test-decoration:none; color:black;">{{ news_detail.author }}</a></p>
           {{ news_detail.content }}
         </article>
+        {% endautoescape %}
 
       </div>
 

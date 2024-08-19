@@ -120,6 +120,7 @@
 </head>
 
 <body id="home">
+  
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -270,16 +271,17 @@
     <!-- Noticia destacada 1 -->
     {% for news in news_selection %}
     {% if news.highlight1 == True %}
+    {% autoescape off %}
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
       <div class="row">
         <a href="{% url 'home_app:news-detail' news.id %}" style="text-decoration:none; color:black;">
           <div class="col-lg-6 px-0">
             <h1 class="display-4 fst-italic">{{ news.title }}</h1>
-            <p class="lead my-3 p-3">{{ news.summary }}</p>
+            <p class="lead my-3">{{ news.summary }}</p>
             <p class="lead mb-0"><a href="{% url 'home_app:news-detail' news.id %}"
                 class="text-body-emphasis fw-bold">Leer...</a></p>
           </div>
-          <div class="col-lg-6 px-0 p-0 m-0">
+          <div class="col-lg-6 px-0 m-0">
             <a href="{% url 'home_app:news-detail' news.id %}">
             <img class="w-100" height="" src="{{ news.image.url }}">
             </a>
@@ -290,6 +292,7 @@
         </a>
       </div>
     </div>
+    {% endautoescape %}
     {% endif %}
     {% endfor %}
 
@@ -298,6 +301,7 @@
     <div class="row mb-2">
       {% for news in news_selection %}
       {% if news.highlight2 == True %}
+      {% autoescape off %}
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
@@ -317,6 +321,7 @@
           </div>
         </div>
       </div>
+      {% endautoescape %}
       {% endif %}
       {% endfor %}
 
@@ -324,6 +329,7 @@
       <!-- Destacada 3 -->
       {% for news in news_selection %}
       {% if news.highlight3 == True %}
+      {% autoescape off %}
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
@@ -343,6 +349,7 @@
           </div>
         </div>
       </div>
+      {% endautoescape%}
       {% endif %}
       {% endfor %}
 
@@ -810,7 +817,7 @@
     </p>
   </footer>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 </html>
