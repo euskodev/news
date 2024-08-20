@@ -46,3 +46,13 @@ class NewsByCategoryView(ListView):
         context['news_selection'] = News.objects.filter(category__name = categoryName).order_by('-id')
         return context
 
+class PoliticasdeprivacidadView(TemplateView):
+    template_name = "Politicas_de_privacidad.html"
+
+class PoliticasdecookiesView(TemplateView):
+    template_name = "Politicas_de_cookies.html"
+
+
+class AvisolegalView(TemplateView):
+    template_name = "Aviso_legal.html"
+
