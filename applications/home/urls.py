@@ -2,6 +2,7 @@ from os import name
 from django.urls  import include,path
 from . import views
 from django.conf.urls import handler404
+
 app_name = 'home_app'
 
 
@@ -29,10 +30,10 @@ urlpatterns = [
         name='Aviso_legal',
     ),
 
-    #path('404',
-    #    views.Error404View.as_view(),
-    #    name='error-404',
-    #),
+    path('404',
+      views.Error404View.as_view(),
+      name='error-404',
+    ),
 
 
 ]
