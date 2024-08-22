@@ -47,16 +47,19 @@ class NewsByCategoryView(ListView):
         return context
 
 class PoliticasdeprivacidadView(TemplateView):
-    template_name = "Politicas_de_privacidad.html"
+    template_name = "home/Politicas_de_privacidad.html"
 
 class PoliticasdecookiesView(TemplateView):
-    template_name = "Politicas_de_cookies.html"
+    template_name = "home/Politicas_de_cookies.html"
 
 
 class AvisolegalView(TemplateView):
-    template_name = "Aviso_legal.html"
+    template_name = "home/Aviso_legal.html"
 
-class Error404View(TemplateView):
-    template_name = "error-404.html"
+#class Error404View(TemplateView):
+  # template_name = "home/error-404.html"
+
+def custom_404(request, exception):
+    return render(request, 'home/erro-404.html', status=404)
 
 

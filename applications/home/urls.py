@@ -4,6 +4,9 @@ from . import views
 
 app_name = 'home_app'
 
+
+handler404 ='applications.home.views.custom_404'
+
 urlpatterns = [
     path('', views.HomePageView.as_view(),name='home',),
     #path('news_detail', views.HomePageView.as_view(),name='home',),
@@ -26,10 +29,10 @@ urlpatterns = [
         name='Aviso_legal',
     ),
 
-    path('404',
-        views.Error404View.as_view(),
-        name='error-404',
-    ),
+    #path('404',
+    #    views.Error404View.as_view(),
+    #    name='error-404',
+    #),
 
 
 ]
