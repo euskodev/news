@@ -56,8 +56,8 @@ class PoliticasdecookiesView(TemplateView):
 class AvisolegalView(TemplateView):
     template_name = "home/Aviso_legal.html"
 
-#class Error404View(TemplateView):
-  # template_name = "home/error-404.html"
+class Error404View(TemplateView):
+  template_name = "home/error-404.html"
 
 def custom_404(request, exception):
     return render(request, 'home/erro-404.html', status=404)
