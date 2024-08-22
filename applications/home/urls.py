@@ -26,5 +26,10 @@ urlpatterns = [
         name='Aviso_legal',
     ),
 
+    path('404',
+        views.Error404View.as_view(),
+        name='error-404',
+    ),
+
 
 ]

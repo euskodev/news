@@ -56,3 +56,7 @@ class PoliticasdecookiesView(TemplateView):
 class AvisolegalView(TemplateView):
     template_name = "Aviso_legal.html"
 
+class Error404View(TemplateView):
+    template_name = "error-404.html"
+
+
