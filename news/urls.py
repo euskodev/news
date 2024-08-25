@@ -12,6 +12,8 @@ urlpatterns = [
     path('tynymce/', include('tinymce.urls')),
     path("ads.txt",
          RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),),
+    path("ads",
+         RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),),
 ]
 
 
