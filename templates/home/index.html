@@ -322,7 +322,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'World' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -346,7 +348,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Technology' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -373,7 +377,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Music' %}
             <div class="col-md-6">
-              <img class="w-100" src="{{ news.image.url }}">
+              <a href="{% url 'home_app:news-detail' news.id %}">
+        <img class="w-100" src="{{ news.image.url }}">
+      </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -397,7 +403,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Society' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -425,7 +433,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Sport' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -449,7 +459,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Design' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -477,7 +489,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Culture' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -501,7 +515,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Business' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -529,7 +545,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Politics' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -553,7 +571,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Opinion' %}
             <div class="col-md-6">
-              <img class="w-100" src="{{ news.image.url }}">
+              <a href="{% url 'home_app:news-detail' news.id %}">
+        <img class="w-100" src="{{ news.image.url }}">
+      </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -581,7 +601,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Science' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -605,7 +627,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Health' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -633,7 +657,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Style' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -657,7 +683,9 @@
             {% for news in news_selection %}
             {% if news.category.name == 'Travel' %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+            </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
