@@ -700,7 +700,9 @@
             {% for news in news_selection %}
             {% if forloop.counter == 17 %}
             <div class="col-md-6">
+              <a href="{% url 'home_app:news-detail' news.id %}">
               <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
