@@ -46,3 +46,20 @@ class NewsByCategoryView(ListView):
         context['news_selection'] = News.objects.filter(category__name = categoryName).order_by('-id')
         return context
 
+class PoliticasdeprivacidadView(TemplateView):
+    template_name = "home/Politicas_de_privacidad.html"
+
+class PoliticasdecookiesView(TemplateView):
+    template_name = "home/Politicas_de_cookies.html"
+
+
+class AvisolegalView(TemplateView):
+    template_name = "home/Aviso_legal.html"
+
+class Error404View(TemplateView):
+  template_name = "home/error-404.html"
+
+def custom_404(request, exception):
+    return render(request, 'home/erro-404.html', status=404)
+
+
