@@ -4,6 +4,11 @@
 
 <head>
   <!--espacio para google adsense-->
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565972943494658"
+    crossorigin="anonymous"></script>
+
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565972943494658"
     crossorigin="anonymous"></script>
   <!--termina el espacio de google adsense-->
@@ -141,7 +146,7 @@
         d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
     </symbol>
   </svg>
- 
+
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -255,7 +260,7 @@
       {% if news.highlight2 == True %}
       {% autoescape off %}
       <div class="col-md-6">
-        
+
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary-emphasis">{{ news.category }}</strong>
@@ -323,8 +328,8 @@
             {% if news.category.name == 'World' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -338,7 +343,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -349,8 +354,8 @@
             {% if news.category.name == 'Technology' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -364,7 +369,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -378,8 +383,8 @@
             {% if news.category.name == 'Music' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-        <img class="w-100" src="{{ news.image.url }}">
-      </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -393,7 +398,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -404,8 +409,8 @@
             {% if news.category.name == 'Society' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -419,7 +424,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -434,8 +439,8 @@
             {% if news.category.name == 'Sport' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -449,7 +454,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -460,8 +465,8 @@
             {% if news.category.name == 'Design' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -475,7 +480,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -490,8 +495,8 @@
             {% if news.category.name == 'Culture' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -505,7 +510,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -516,8 +521,8 @@
             {% if news.category.name == 'Business' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -531,7 +536,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -546,8 +551,8 @@
             {% if news.category.name == 'Politics' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -561,7 +566,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -572,8 +577,8 @@
             {% if news.category.name == 'Opinion' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-        <img class="w-100" src="{{ news.image.url }}">
-      </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -587,7 +592,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -602,8 +607,8 @@
             {% if news.category.name == 'Science' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -617,7 +622,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -628,8 +633,8 @@
             {% if news.category.name == 'Health' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -643,7 +648,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -658,8 +663,8 @@
             {% if news.category.name == 'Style' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -673,7 +678,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
@@ -684,8 +689,8 @@
             {% if news.category.name == 'Travel' %}
             <div class="col-md-6">
               <a href="{% url 'home_app:news-detail' news.id %}">
-              <img class="w-100" src="{{ news.image.url }}">
-            </a>
+                <img class="w-100" src="{{ news.image.url }}">
+              </a>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                   <strong class="d-inline-block mb-2 text-success-emphasis">{{ news.category }}</strong>
@@ -699,7 +704,7 @@
                       <use xlink:href="#chevron-right" /></svg>
                   </a>
                 </div>
-                
+
               </div>
             </div>
             {% endif %}
