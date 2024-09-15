@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views.generic import (
     TemplateView,
     ListView,
-    DetailView
+    DetailView,
+    CreateView
 )
 from .models import News
 
@@ -65,5 +66,6 @@ class Error404View(TemplateView):
 
 def custom_404(request, exception):
     return render(request, 'home/erro-404.html', status=404)
+
 
 
