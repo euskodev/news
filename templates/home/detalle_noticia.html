@@ -371,6 +371,41 @@
  <!--Fin Adsterra-->
   </main>
 
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group">
+          <h3>Comentarios</h3>
+          <hr class="w-100">
+          {% for comment in comment %}
+          <li class="list-group-item"><label class"" style="color:#85c1e9;">{{ comment.name }} </label> <label class="" style="color:#ddd;"> ( {{ comment.datetime|date:"d/m/Y"  }} )</label><br>{{ comment.comment }}</li>
+          {% endfor %}
+          
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Formulario para comentar-->
+  <div class="container mb-3 p-3" style="background-color: #e1f3ff;">
+    <div class="row">
+      <div class="col-12">
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre y apellido</label>
+      <input type="text" class="form-control" id="name" name="name" aria-describedby="" placeholder="">
+      <label for="exampleInputEmail1">Escribir comentario</label>
+      <input type="text" class="form-control" id="comment" name="comment" aria-describedby="" placeholder="">
+      </div>
+    <button type="submit" class="btn btn-dark mt-2">Enviar</button>
+  </form>
+</div>
+</div>
+</div>
+  <!--Fin del formulario para comentar-->
   <!-- Footer-->
 
   <div class="container-fluid" style="background-color: gray; padding-bottom: 8%;">

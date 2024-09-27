@@ -5,8 +5,9 @@ from django.views.generic import (
     DetailView,
     CreateView
 )
-from .models import News
-
+from .models import News, Comment
+from django.contrib.auth.models import User
+import datetime
 # Create your views here.
 class HomePageView(ListView):
     model = News
@@ -30,9 +31,33 @@ class NewsDetailView(DetailView):
     model = News # Especifica el modelo Blog
     template_name = 'home/detalle_noticia.html' # Define el template "articulo_completo.html"
     context_object_name = 'news_detail'
+    
+    def post(self, request, *args, **kwargs):
+        userName=self.request.user
+        userId = self.request.user.id
+        postComment = request.POST.get('comment')
+        postName = request.POST.get('name')
+        postNews = self.kwargs['pk']
+        print("La noticia esssssss: ",postNews)
+        print(postComment)
+        newComment = Comment()
+        newComment.comment = postComment
+        if newComment.comment:
+            newComment.user = User.objects.get(id=userId)
+            newComment.comment = postComment
+            newsId = self.kwargs['pk']
+            newComment.news= News.objects.get(id=newsId)
+            newComment.name = postName
+            #newComment.datetime = now()
+            newComment.save()
+        return render(request, 'home/index.html')
+    
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)        
+        context = super().get_context_data(**kwargs)
+        postNews = self.kwargs['pk']      
         context['news_selection'] = News.objects.order_by('-id')[:10]
+        newsId = self.kwargs['pk']
+        context['comment'] = Comment.objects.filter(news=newsId)
         return context
 
 

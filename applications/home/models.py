@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from tinymce.models import HTMLField
+from datetime import datetime
 
 
 # Se obtiene el modelo de usuario de Django
@@ -42,3 +43,13 @@ class News(models.Model):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
 
+
+class Comment(models.Model):
+    comment=models.TextField(blank=True,null=True)
+    news=models.ForeignKey(News, on_delete=models.CASCADE, blank=True, null=True)
+    user=models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    name=models.CharField(max_length=40, blank=True, null=True)
+    datetime = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
