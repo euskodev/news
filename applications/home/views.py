@@ -5,7 +5,7 @@ from django.views.generic import (
     DetailView,
     CreateView
 )
-from .models import News, Comment, Category
+from .models import News, Commentary, Category
 from django.contrib.auth.models import User
 import datetime
 # Create your views here.
@@ -42,7 +42,7 @@ class NewsDetailView(DetailView):
         postComment = request.POST.get('comment')
         postName = request.POST.get('name')
         #Guardar comentario
-        newComment = Comment()
+        newComment = Commentary()
         newComment.comment = postComment
         newComment.news= News.objects.get(id=postNewsId)
         newComment.name = postName
@@ -54,7 +54,7 @@ class NewsDetailView(DetailView):
         postNews = self.kwargs['pk']      
         context['news_selection'] = News.objects.order_by('-id')[:10]
         newsId = self.kwargs['pk']
-        context['comment'] = Comment.objects.filter(news=newsId)
+        context['comment'] = Commentary.objects.filter(news=newsId)
         return context
 
 

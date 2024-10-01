@@ -42,12 +42,13 @@ class News(models.Model):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
     
-class Comment(models.Model):
+class Commentary(models.Model):
     comment=models.TextField(blank=True,null=True)
     news=models.ForeignKey(News, on_delete=models.CASCADE, blank=True, null=True)
     user=models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     name=models.CharField(max_length=40, blank=True, null=True)
     datetime = models.DateTimeField(auto_now_add=True)
+    a=models.BooleanField(blank=True,null=True)
 
     def __str__(self):
         return self.name

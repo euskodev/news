@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Category, Comment
+from .models import News, Category, Commentary
 
 
 
@@ -11,6 +11,6 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name",)
 admin.site.register(Category, CategoryAdmin)
 
-class CommentAdmin(admin.ModelAdmin):
+class CommentaryAdmin(admin.ModelAdmin):
     list_display = ("comment","news")
-admin.site.register(Comment, CommentAdmin)
+admin.site.register(Commentary, CommentaryAdmin)
