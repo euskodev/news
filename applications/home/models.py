@@ -4,10 +4,8 @@ from django.contrib.auth import get_user_model
 from tinymce.models import HTMLField
 from datetime import datetime
 
-
 # Se obtiene el modelo de usuario de Django
 User = get_user_model()
-
 
 class Category(models.Model):
     name = models.CharField(max_length=255, blank=True,null=True)
@@ -19,7 +17,6 @@ class Category(models.Model):
     def get_summary(self):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
-
 
 class News(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)
@@ -44,7 +41,6 @@ class News(models.Model):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
     
-
 class Comment(models.Model):
     comment=models.TextField(blank=True,null=True)
     news=models.ForeignKey(News, on_delete=models.CASCADE, blank=True, null=True)

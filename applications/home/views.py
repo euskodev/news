@@ -33,22 +33,21 @@ class NewsDetailView(DetailView):
     context_object_name = 'news_detail'
     
     def post(self, request, *args, **kwargs):
+        #Tomar usuario
         userName=self.request.user
         userId = self.request.user.id
+        #Tomar id de noticia
+        postNewsId = self.kwargs['pk']
+        #Tomar datos post de form
         postComment = request.POST.get('comment')
         postName = request.POST.get('name')
-        postNews = self.kwargs['pk']
-        print("La noticia esssssss: ",postNews)
-        print(postComment)
+        #Guardar comentario
         newComment = Comment()
         newComment.comment = postComment
-        newsId = self.kwargs['pk']
-        newComment.news= News.objects.get(id=newsId)
+        newComment.news= News.objects.get(id=postNewsId)
         newComment.name = postName
-            #newComment.datetime = now()
         newComment.save()
         return render(request, 'home/index.html')
-        
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
