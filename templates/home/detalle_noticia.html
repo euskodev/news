@@ -377,7 +377,9 @@
         <ul class="list-group">
           <h3>Comentarios</h3>
           <hr class="w-100">
-         
+            {% for comment in comment %}
+            <li class="list-group-item"><label class"" style="color:#85c1e9;">{{ comment.name }} </label> <label class="" style="color:#ddd;"> ( {{ comment.datetime|date:"d/m/Y"  }} )</label><br>{{ comment.comment }}</li>
+            {% endfor %}
           
         </ul>
 
