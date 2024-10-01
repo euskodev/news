@@ -32,6 +32,7 @@ class News(models.Model):
     recent_post1 = models.BooleanField(blank=True,null=True)
     recent_post2 = models.BooleanField(blank=True,null=True)
     recent_post3 = models.BooleanField(blank=True,null=True)
+    a=models.BooleanField(blank=True,null=True)
 
     def __str__(self):
         """Devuelve el título del post como representación en cadena."""
