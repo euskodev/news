@@ -42,18 +42,12 @@ class NewsDetailView(DetailView):
         print(postComment)
         newComment = Comment()
         newComment.comment = postComment
-        if newComment.comment:
-            newComment = Comment()
-            newComment.comment = postComment
-            newsId = self.kwargs['pk']
-            newComment.news= News.objects.get(id=newsId)
-            newComment.name = postName
+        newsId = self.kwargs['pk']
+        newComment.news= News.objects.get(id=newsId)
+        newComment.name = postName
             #newComment.datetime = now()
-            newComment.save()
-            return render(request, 'home/index.html')
-        else:
-            print("No hay")
-            return render('home/index.html')
+        newComment.save()
+        return render(request, 'home/index.html')
         
     
     def get_context_data(self, **kwargs):
