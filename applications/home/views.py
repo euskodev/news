@@ -43,6 +43,7 @@ class NewsDetailView(DetailView):
         newComment = Comment()
         newComment.comment = postComment
         if newComment.comment:
+            newComment = Comment()
             newComment.comment = postComment
             newsId = self.kwargs['pk']
             newComment.news= News.objects.get(id=newsId)
