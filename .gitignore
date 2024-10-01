@@ -5,6 +5,8 @@ __pycache__/
 db.sqlite3
 db.sqlite3-journal
 .env
+migrations
+fixtures
 
 # Ignore the settings file
 settings.py

@@ -5,7 +5,7 @@ from django.views.generic import (
     DetailView,
     CreateView
 )
-from .models import News, Comment
+from .models import News, Comment, Category
 from django.contrib.auth.models import User
 import datetime
 # Create your views here.

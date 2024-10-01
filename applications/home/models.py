@@ -20,6 +20,7 @@ class Category(models.Model):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
 
+
 class News(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
@@ -42,7 +43,7 @@ class News(models.Model):
     def get_summary(self):
         """Devuelve un resumen del cuerpo del post (primeras 200 palabras)."""
         return self.content[:200]
-
+    
 
 class Comment(models.Model):
     comment=models.TextField(blank=True,null=True)
@@ -53,3 +54,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.name
+
